@@ -19,6 +19,7 @@ add_executable(pacman_sdl
   src/Ghost.cpp
   src/Inky.cpp
   src/Pac.cpp
+  src/Pinky.cpp
   src/Position.cpp
   src/Sound.cpp
   src/Texture.cpp
