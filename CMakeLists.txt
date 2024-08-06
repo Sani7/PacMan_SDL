@@ -13,6 +13,7 @@ add_executable(pacman_sdl
   main.cpp
   src/Board.cpp
   src/Entity.cpp
+  src/Fruit.cpp
   src/Position.cpp
   src/Sound.cpp
   src/Texture.cpp
