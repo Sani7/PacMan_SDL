@@ -16,6 +16,7 @@ add_executable(pacman_sdl
   src/Clyde.cpp
   src/Entity.cpp
   src/Fruit.cpp
+  src/Game.cpp
   src/Ghost.cpp
   src/Inky.cpp
   src/Pac.cpp
