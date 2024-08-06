@@ -12,6 +12,7 @@ include_directories(${SDL2_INCLUDE_DIRS})
 add_executable(pacman_sdl
   main.cpp
   src/Position.cpp
+  src/Sound.cpp
   src/Texture.cpp
   src/Timer.cpp
 )
