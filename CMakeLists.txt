@@ -12,6 +12,7 @@ include_directories(${SDL2_INCLUDE_DIRS})
 add_executable(pacman_sdl
   main.cpp
   src/Board.cpp
+  src/Blinky.cpp
   src/Entity.cpp
   src/Fruit.cpp
   src/Ghost.cpp
