@@ -12,6 +12,7 @@ include_directories(${SDL2_INCLUDE_DIRS})
 add_executable(pacman_sdl
   main.cpp
   src/Position.cpp
+  src/Texture.cpp
   src/Timer.cpp
 )
 target_link_libraries(pacman_sdl ${SDL2_LIBRARIES} SDL2::Main SDL2::Image SDL2::TTF SDL2::Mixer)
