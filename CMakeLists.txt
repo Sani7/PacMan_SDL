@@ -10,7 +10,7 @@ find_package(SDL2_mixer REQUIRED)
 include_directories(${SDL2_INCLUDE_DIRS})
 
 add_executable(pacman_sdl
-  main.cpp
+  src/main.cpp
   src/Board.cpp
   src/Blinky.cpp
   src/Clyde.cpp
