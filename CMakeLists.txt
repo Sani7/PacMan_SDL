@@ -13,6 +13,7 @@ add_executable(pacman_sdl
   main.cpp
   src/Board.cpp
   src/Blinky.cpp
+  src/Clyde.cpp
   src/Entity.cpp
   src/Fruit.cpp
   src/Ghost.cpp
