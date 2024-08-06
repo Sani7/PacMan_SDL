@@ -17,6 +17,7 @@ add_executable(pacman_sdl
   src/Entity.cpp
   src/Fruit.cpp
   src/Ghost.cpp
+  src/Inky.cpp
   src/Pac.cpp
   src/Position.cpp
   src/Sound.cpp
