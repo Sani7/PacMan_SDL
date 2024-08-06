@@ -26,5 +26,8 @@ add_executable(pacman_sdl
   src/Texture.cpp
   src/Timer.cpp
 )
-target_link_libraries(pacman_sdl ${SDL2_LIBRARIES} SDL2::Main SDL2::Image SDL2::TTF SDL2::Mixer)
+target_include_directories(pacman_sdl
+  PUBLIC
+  ${CMAKE_CURRENT_LIST_DIR}/inc/)
 
+target_link_libraries(pacman_sdl ${SDL2_LIBRARIES} SDL2::Main SDL2::Image SDL2::TTF SDL2::Mixer)
