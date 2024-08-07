@@ -31,3 +31,19 @@ target_include_directories(pacman_sdl
   ${CMAKE_CURRENT_LIST_DIR}/inc/)
 
 target_link_libraries(pacman_sdl ${SDL2_LIBRARIES} SDL2::Main SDL2::Image SDL2::TTF SDL2::Mixer)
+
+# Copy resources
+add_custom_command(TARGET pacman_sdl POST_BUILD
+  COMMAND ${CMAKE_COMMAND} -E copy_directory
+  ${CMAKE_SOURCE_DIR}/Fonts
+  $<TARGET_FILE_DIR:pacman_sdl>/Fonts)
+  
+add_custom_command(TARGET pacman_sdl POST_BUILD
+  COMMAND ${CMAKE_COMMAND} -E copy_directory
+  ${CMAKE_SOURCE_DIR}/Sounds
+  $<TARGET_FILE_DIR:pacman_sdl>/Sounds)
+
+add_custom_command(TARGET pacman_sdl POST_BUILD
+  COMMAND ${CMAKE_COMMAND} -E copy_directory
+  ${CMAKE_SOURCE_DIR}/Textures
+  $<TARGET_FILE_DIR:pacman_sdl>/Textures)

@@ -15,14 +15,23 @@
 #include "Texture.hpp"
 #include "Timer.hpp"
 
+#include <iostream>
+#include <filesystem>
+
 // Use arrow keys or WASD to move
 SDL_Window* window = NULL;
 SDL_Renderer* renderer = NULL;
 SDL_Rect* CurrentClip = NULL;
 TTF_Font* Font = NULL;
 TTF_Font* LittleFont = NULL;
+std::string build_path = "";
 
 int main(int argc, char* args[]) {
+    char* last = strrchr(args[0], '/');
+    if (last != NULL) {
+        *++last = '\0';
+        build_path = args[0];
+    }
     InitializeSDL();
 
     Game mGame;
@@ -82,8 +91,8 @@ void InitializeSDL() {
     int imgFlags = IMG_INIT_PNG;
     IMG_Init(imgFlags);
     TTF_Init();
-    Font = TTF_OpenFont("Fonts/emulogic.ttf", BlockSize24);
-    LittleFont = TTF_OpenFont("Fonts/VpPixel.ttf", 20);
+    Font = TTF_OpenFont(std::string(build_path + "Fonts/emulogic.ttf").c_str(), BlockSize24);
+    LittleFont = TTF_OpenFont(std::string(build_path + "Fonts/VpPixel.ttf").c_str(), 20);
     Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 1024);
 }
 

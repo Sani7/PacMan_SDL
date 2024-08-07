@@ -1,4 +1,5 @@
 #pragma once
+#include "main.hpp"
 #include "Entity.hpp"
 #include "Texture.hpp"
 #include "Timer.hpp"

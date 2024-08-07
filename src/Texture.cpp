@@ -13,7 +13,8 @@ LTexture::~LTexture() {
 bool LTexture::loadFromFile(std::string path) {
     // Get rid of preexisting texture
     free();
-
+    
+    path = build_path + path;
     // The final texture
     SDL_Texture* newTexture = NULL;
 

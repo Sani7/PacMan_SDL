@@ -1,13 +1,13 @@
 #include "Sound.hpp"
 
 Sound::Sound() {
-    Intro = Mix_LoadWAV("Sounds/Intro.wav");
-    EatFruit = Mix_LoadWAV("Sounds/EatFruit.wav");
-    ExtraLife = Mix_LoadWAV("Sounds/ExtraLife.wav");
-    PacDeath = Mix_LoadWAV("Sounds/PacDeath.wav");
-    GhostDeath = Mix_LoadWAV("Sounds/GhostDeath.wav");
-    ScatterGhost = Mix_LoadWAV("Sounds/ScatterGhost.wav");
-    Waka = Mix_LoadWAV("Sounds/Waka.wav");
+    Intro = Mix_LoadWAV(std::string(build_path + "Sounds/Intro.wav").c_str());
+    EatFruit = Mix_LoadWAV(std::string(build_path + "Sounds/EatFruit.wav").c_str());
+    ExtraLife = Mix_LoadWAV(std::string(build_path + "Sounds/ExtraLife.wav").c_str());
+    PacDeath = Mix_LoadWAV(std::string(build_path + "Sounds/PacDeath.wav").c_str());
+    GhostDeath = Mix_LoadWAV(std::string(build_path + "Sounds/GhostDeath.wav").c_str());
+    ScatterGhost = Mix_LoadWAV(std::string(build_path + "Sounds/ScatterGhost.wav").c_str());
+    Waka = Mix_LoadWAV(std::string(build_path + "Sounds/Waka.wav").c_str());
     Mix_Volume(-1, 10);
 }
 

@@ -37,6 +37,7 @@ extern SDL_Renderer* renderer;
 extern SDL_Rect* CurrentClip;
 extern TTF_Font* Font;
 extern TTF_Font* LittleFont;
+extern std::string build_path;
 
 void InitializeSDL();
 void CloseSDL();
